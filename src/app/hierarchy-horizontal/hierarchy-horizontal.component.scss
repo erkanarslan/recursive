@@ -1,0 +1,49 @@
+:host {
+	display: inline-block;
+	position: relative;
+}
+
+.center {
+	text-align: center;
+}
+
+.unit {
+	display: inline-flex;
+	width: 100px;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(83, 174, 183);
+	margin: 10px;
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.children {
+	display: flex;
+	align-items: flex-start;
+}
+
+.to-parent, .to-children {
+	position: absolute;
+	display: inline-block;
+	border-left: 2px solid #09f;
+	width: 0;
+	height: 10px;
+}
+
+.to-parent {
+	top: 0;
+}
+
+.to-children {
+	top: 70px;
+}
+
+.horizontal {
+	position: absolute;
+	display: inline-block;
+	border-top: 2px solid #09f;
+	height: 0;
+	top: 80px;
+}

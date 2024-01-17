@@ -1,0 +1,7 @@
+<div class="unit-line">{{ node.label }}</div>
+<div class="children">
+	<app-hierarchy
+		*ngFor="let child of node.children"
+		[node]="child"
+	></app-hierarchy>
+</div>

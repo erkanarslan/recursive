@@ -1,0 +1,16 @@
+<div class="unit" [style.margin-left.px]="left">{{ node.label }}</div>
+<div class="children">
+	<app-hierarchy-horizontal
+		*ngFor="let child of node.children"
+		[node]="child"
+	></app-hierarchy-horizontal>
+</div>
+
+<div *ngIf="node.parent" class="to-parent" [style.left.px]="vLineLeft"></div>
+<div *ngIf="node.children.length" class="to-children" [style.left.px]="vLineLeft"></div>
+<div
+	*ngIf="node.children.length"
+	class="horizontal"
+	[style.left.px]="hLine.left"
+	[style.width.px]="hLine.width"
+></div>
